@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - WeaDay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#CCD5AE]">
+    <div class="flex">
+        <div class="w-contain h-contain px-[23px] py-[55px]">
+            <div class="flex flex-col sticky top-[32px] bg-[#CCD5AE] w-[100px] h-contain drop-shadow-lg rounded-lg items-center pt-[32px] pb-[100px]">
+                <img src="../assets/Logo.png" alt="" class="w-[65%]">
+                <div class="flex flex-col gap-y-[28px] mt-[120px]">
+                    <button class="w-[78px] h-[78px] rounded-lg flex justify-center items-center hover:bg-neutral-400 active:bg-neutral-100">
+                        <a href="../index.html"><img src="../assets/tabel.svg" alt="" class="w-[40px]"></a>
+                    </button>
+                    <button class="bg-neutral-100 w-[78px] h-[78px] rounded-lg flex justify-center items-center hover:bg-neutral-400 active:bg-neutral-100">
+                        <a href="../pages/analytics.html"><img src="../assets/diagram.svg" alt="" class="w-[40px]"></a>
+                    </button>
+                    <button class="w-[78px] h-[78px] rounded-lg flex justify-center items-center hover:bg-neutral-400">
+                        <a href="../pages/recommendation.html"><img src="../assets/solar_health-linear (Active).svg" alt="" class="w-[40px]"></a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="main-content" class="flex flex-col flex-1 w-contain h-contain pt-[60px] text-xl px-[28px] py-[48px] gap-y-[40px]">
+            <div class="flex justify-between items-center w-full h-[62px]">
+                <div class="">
+                    <h2 class="">Your Location :</h2>
+                    <h1 class="font-semibold" id="city">-</h1>
+                </div>
+                <div class="flex items-center">
+                    <span class="absolute pl-[12px]"><img src="/assets/search.svg" alt=""></span>
+                    <input type="text" class="w-[376px] h-[44px] text-base rounded-lg px-[16px] py-[12px] text-end" id="InputSearchCountry" placeholder="Search Your Location">
+                </div>
+            </div>
+            <div>
+            <div class="flex flex-col gap-y-[40px]">
+                <div class="flex flex-col">
+                    <h1 class="text-2xl font-semibold">Hourly Forecast</h1>
+                    <div id="table-hourly-forecast" class="bg-[#FFFFFF] w-contain h-contain mt-[20px] rounded-md">
+                        <div class="flex gap-x-[72px] gap-y-[20px] px-[40px] py-[24px] border-b-2 border-neutral-300">
+                            <div class="flex space-x-[20px] m-[8px] items-center">
+                                <img src="../assets/weathericon/Property 1=Default.svg" alt="" class="w-[60px]">
+                                <span class="">
+                                    <h1 class="text-xl font-medium">Today</h1>
+                                    <p class="text-xl font-bold" id="temp">0</p>
+                                </span>
+                            </div>
+                            <span class="flex flex-col justify-center mr-[40px]">
+                                    <h1 class="text-base font-semibold" id="daytime">Daytime : </h1>
+                                    <h1 class="text-base font-semibold" id="nighttime">Nighttime : </h1>
+                            </span>
+                            <div class="flex gap-x-[30px] items-center">
+                                <div class="bg-[#CCD5AE] flex w-contain h-contain p-[12px] py-[18px] items-center space-x-[12px] rounded-md">
+                                    <div class="w-contain h-contain p-[4px] bg-neutral-100 rounded-md">
+                                        <img src="../assets/iconset/Humidity=Humidity(Dark).svg" alt="" class="w-[32px]">
+                                    </div>
+                                    <span>
+                                        <h1 class="text-sm font-semibold">Humidity</h1>
+                                        <p class="text-sm font-light" id="humidity">0</p>
+                                    </span>
+                                </div>    
+                            </div>
+                            <div class="bg-[#CCD5AE] flex w-contain h-contain px-[12px] py-[18px] items-center space-x-[12px] rounded-md">
+                                <div class="w-contain h-contain p-[4px] bg-neutral-100 rounded-md">
+                                    <img src="../assets/iconset/UV=UV(Dark).svg" alt="" class="w-[32px]">
+                                </div>
+                                <span>
+                                    <h1 class="text-sm font-semibold">UV Index</h1>
+                                    <p class="text-sm font-light" id="uvindex">0</p>
+                                </span>
+                            </div>
+                            <div class="bg-[#CCD5AE] flex w-contain h-contain px-[12px] py-[18px] items-center space-x-[12px] rounded-md">
+                                <div class="w-contain h-contain p-[4px] bg-neutral-100 rounded-md">
+                                    <img src="../assets/iconset/Wind=Wind(Dark).svg" alt="" class="w-[32px] bg-neutral-100 rounded-md">
+                                </div>
+                                <span>
+                                    <h1 class="text-sm font-semibold">Wind</h1>
+                                    <p class="text-sm font-light" id="wind">mph</p>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex justify-between gap-x-[72px] w-contain h-[85px] bg-[#ffffff] p-[40px] border-b-2 border-neutral-300">
+                                <div class="flex items-center">
+                                    <div class="flex gap-x-[72px]">
+                                        <h1 class="text-2xl font-semibold">00:00</h1>
+                                        <div class="bg-[#CCD5AE] flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Temp=Temp48.svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="temp00"> 0°C </p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/UV=UV(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="uvindex00">0</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Humidity=Humidity(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="humidity00">0</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Wind=Wind(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="wind00">0</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-[12px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                    <img src="../assets/iconset/Precipitation=Precipitation(Dark).svg" alt="" class="w-[32px]">
+                                    <p class="text-base" id="description00">Rainy</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between gap-x-[72px] w-contain h-[85px] bg-[#ffffff] p-[40px] border-b-2 border-neutral-300">
+                                <div class="flex items-center">
+                                    <div class="flex gap-x-[72px]">
+                                        <h1 class="text-2xl font-semibold">03:00</h1>
+                                        <div class="bg-[#CCD5AE] flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Temp=Temp48.svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="temp03">0°C</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/UV=UV(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="uvindex03">0</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Humidity=Humidity(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="humidity03">0</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Wind=Wind(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="wind03">0</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-[12px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                    <img src="../assets/iconset/Precipitation=Precipitation(Dark).svg" alt="" class="w-[32px]">
+                                    <p class="text-base" id="description03">Rainy</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between gap-x-[72px] w-contain h-[85px] bg-[#ffffff] p-[40px] border-b-2 border-neutral-300">
+                                <div class="flex items-center">
+                                    <div class="flex gap-x-[72px]">
+                                        <h1 class="text-2xl font-semibold">06:00</h1>
+                                        <div class="bg-[#CCD5AE] flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Temp=Temp48.svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="temp06">0°C</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/UV=UV(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="uvindex06">0</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Humidity=Humidity(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="humidity06">0</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Wind=Wind(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="wind06">0</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-[12px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                    <img src="../assets/iconset/Precipitation=Precipitation(Dark).svg" alt="" class="w-[32px]">
+                                    <p class="text-base" id="description06">Rainy</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between gap-x-[72px] w-contain h-[85px] bg-[#ffffff] p-[40px] border-b-2 border-neutral-300">
+                                <div class="flex items-center">
+                                    <div class="flex gap-x-[72px]">
+                                        <h1 class="text-2xl font-semibold">09:00</h1>
+                                        <div class="bg-[#CCD5AE] flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Temp=Temp48.svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="temp09">0°C</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/UV=UV(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="uvindex09">0</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Humidity=Humidity(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="humidity09">0</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Wind=Wind(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="wind09">0</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-[12px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                    <img src="../assets/iconset/Precipitation=Precipitation(Dark).svg" alt="" class="w-[32px]">
+                                    <p class="text-base" id="description09">Rainy</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between gap-x-[72px] w-contain h-[85px] bg-[#ffffff] p-[40px] rounded-md border-b-2 border-neutral-300">
+                                <div class="flex items-center">
+                                    <div class="flex gap-x-[72px]">
+                                        <h1 class="text-2xl font-semibold">12:00</h1>
+                                        <div class="bg-[#CCD5AE] flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Temp=Temp48.svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="temp12">0°C</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/UV=UV(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="uvindex12">0</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Humidity=Humidity(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="humidity12">0</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Wind=Wind(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="wind12">0</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-[12px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                        <img src="../assets/iconset/Precipitation=Precipitation(Dark).svg" alt="" class="w-[32px]">
+                                        <p class="text-base" id="description12">Rainy</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between gap-x-[72px] w-contain h-[85px] bg-[#ffffff] p-[40px] rounded-md border-b-2 border-neutral-300">
+                                <div class="flex items-center">
+                                    <div class="flex gap-x-[72px]">
+                                        <h1 class="text-2xl font-semibold">15:00</h1>
+                                        <div class="bg-[#CCD5AE] flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Temp=Temp48.svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="temp15">0°C</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/UV=UV(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="uvindex15">0</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Humidity=Humidity(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="humidity15">0</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Wind=Wind(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="wind15">0</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-[12px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                    <img src="../assets/iconset/Precipitation=Precipitation(Dark).svg" alt="" class="w-[32px]">
+                                    <p class="text-base" id="description15">Rainy</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between gap-x-[72px] w-contain h-[85px] bg-[#ffffff] p-[40px] rounded-md border-b-2 border-neutral-300">
+                                <div class="flex items-center">
+                                    <div class="flex gap-x-[72px]">
+                                        <h1 class="text-2xl font-semibold">18:00</h1>
+                                        <div class="bg-[#CCD5AE] flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Temp=Temp48.svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="temp18">0°C</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/UV=UV(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="uvindex15">0</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Humidity=Humidity(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="humidity18">0</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Wind=Wind(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="wind15">0</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-[12px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                    <img src="../assets/iconset/Precipitation=Precipitation(Dark).svg" alt="" class="w-[32px]">
+                                    <p class="text-base" id="description15">Rainy</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between gap-x-[72px] w-contain h-[85px] bg-[#ffffff] p-[40px] rounded-md border-b-2 border-neutral-300">
+                                <div class="flex items-center">
+                                    <div class="flex gap-x-[72px]">
+                                        <h1 class="text-2xl font-semibold">21:00</h1>
+                                        <div class="bg-[#CCD5AE] flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Temp=Temp48.svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="temp21">0°C</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/UV=UV(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="uvindex15">0</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Humidity=Humidity(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="humidity21">0</p>
+                                        </div>
+                                        <div class="flex space-x-[4px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                            <img src="../assets/iconset/Wind=Wind(Dark).svg" alt="" class="w-[32px]">
+                                            <p class="text-base" id="wind15">0</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-[12px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                                    <img src="../assets/iconset/Precipitation=Precipitation(Dark).svg" alt="" class="w-[32px]">
+                                    <p class="text-base" id="description15">Rainy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="analytics.js"></script>    
+</body>
+</html>

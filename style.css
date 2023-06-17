@@ -1,0 +1,55 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+*{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#forecast-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 20px;
+    
+  }
+  
+
+  .forecast-card {
+    width: 200px;
+    
+    padding: 16px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
+  .forecast-card h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-left: 10px;
+  }
+
+  .weather-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+  }
+
+  .weather-description {
+    font-weight: bold;
+    font-weight: 600;
+  }

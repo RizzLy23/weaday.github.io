@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifestyle Recomendations - WeaDay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#CCD5AE]">
+    <div class="flex">
+        <div class="w-contain h-contain px-[23px] py-[55px]">
+            <div class="flex flex-col sticky top-[32px] bg-[#CCD5AE] w-[100px] h-contain drop-shadow-lg rounded-lg items-center pt-[32px] pb-[100px]">
+                <img src="../assets/Logo.png" alt="" class="w-[65%]">
+                <div class="flex flex-col gap-y-[28px] mt-[120px]">
+                    <button class="w-[78px] h-[78px] rounded-lg flex justify-center items-center hover:bg-neutral-400 active:bg-neutral-100">
+                        <a href="../index.html"><img src="../assets/tabel.svg" alt="" class="w-[40px]"></a>
+                    </button>
+                    <button class="bg-neutral-100 w-[78px] h-[78px] rounded-lg flex justify-center items-center hover:bg-neutral-400 active:bg-neutral-100">
+                        <a href="../pages/analytics.html"><img src="../assets/diagram.svg" alt="" class="w-[40px]"></a>
+                    </button>
+                    <button class="w-[78px] h-[78px] rounded-lg flex justify-center items-center hover:bg-neutral-400">
+                        <a href="../pages/recommendation.html"><img src="../assets/solar_health-linear (Active).svg" alt="" class="w-[40px]"></a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col flex-1 w-[1120px] h-contain pt-[60px] text-xl px-[24px] py-[48px] gap-y-[40px]">
+            <div class="flex justify-between items-center w-full h-[62px]">
+                <div class="">
+                    <h2 class="">Your Location :</h2>
+                    <h1 class="font-semibold" id="city">-</h1>
+                </div>
+                <div class="flex items-center">
+                    <span class="absolute pl-[12px]"><img src="/assets/search.svg" alt=""></span>
+                    <input type="text" class="w-[376px] h-[44px] text-base rounded-lg px-[16px] py-[12px] text-end" id="InputSearchCountry" placeholder="Search Your Location">
+                </div>
+            </div>
+            <div>
+                <h1 class="text-2xl font-semibold">Healhty & Safety</h1>
+                <div class="flex gap-x-[24px] mt-[28px] overflow-hidden">
+                    <div class="bg-neutral-100 flex flex-col w-[200px] h-contain rounded-md px-[20px] py-[20px] items-center space-y-[20px]">
+                        <h1>Umbrella</h1>
+                        <img src="../assets/iconset/Umbrella=Dark.svg" alt="" class="w-[100px]">
+                        <p id="umbrella">-</p>
+                    </div>
+                    <div class="bg-neutral-100 flex flex-col w-[200px] h-contain rounded-md px-[20px] py-[20px] items-center space-y-[20px]">
+                        <h1>Outdoors</h1>
+                        <img src="../assets/iconset/Outdoor=Dark.svg" alt="" class="w-[100px]">
+                        <p id="outdoor">-</p>
+                    </div>
+                    <div class="bg-neutral-100 flex flex-col w-[200px] h-contain rounded-md px-[20px] py-[20px] items-center space-y-[20px]">
+                        <h1>UV Index</h1>
+                        <img src="../assets/iconset/UV=UV(Dark).svg" alt="" class="w-[100px]">
+                        <p id="uvindex">-</p>
+                    </div>
+                    <div class="bg-neutral-100 flex flex-col w-[200px] h-contain rounded-md px-[20px] py-[20px] items-center space-y-[20px]">
+                        <h1>Clothing</h1>
+                        <img src="../assets/iconset/Clothing=Dark.svg" alt="" class="w-[100px]">
+                        <p id="clothes">-</p>
+                    </div>
+                    <div class="bg-neutral-100 flex flex-col w-[200px] h-contain rounded-md px-[20px] py-[20px] items-center space-y-[20px]">
+                        <h1>Heat Stroke</h1>
+                        <img src="../assets/iconset/Temp=Temp48.svg" alt="" class="w-[100px]">
+                        <p id="heatstroke">-</p>
+                    </div>
+                    <div class="bg-neutral-100 flex flex-col w-[200px] h-contain rounded-md px-[20px] py-[20px] items-center space-y-[20px]">
+                        <h1>Wind Chill</h1>
+                        <img src="../assets/iconset/LowTemp=Dark.svg" alt="" class="w-[100px]">
+                        <p id="windchill">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-y-[20px]">
+                <h1 class="text-2xl font-semibold">Activity Recommendations</h1>
+                <!--<p class="text-xl font-normal ">- Nikmati kegiatan di luar ruangan seperti piknik, bersepeda, atau jalan-jalan di taman.<br>
+                    - Pakailah pakaian yang nyaman dan ringan, seperti kaos berlengan pendek, celana pendek, dan sandal.<br>
+                    - Jangan lupa menggunakan sunblock atau sunscreen untuk melindungi kulit dari sinar matahari yang berlebihan.<br>
+                </p>-->
+                <div id="recommendations"></div>
+                <div id="recommendationsheatstroke"></div>
+            </div>
+        </div>
+    </div>
+    <!--<script src="../index.js"></script>-->
+    <script src="../index.js"></script>
+</body>
+</html>

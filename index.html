@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeaDay - Weather Day</title>
+  
+  <!--Styling-->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!--Font Style-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#CCD5AE]">
+  <div class="flex">
+    <!-- Sidebar-->
+    <div class="flex flex-col items-center h-contain px-[24px] pt-[76px] space-y-[38px]">
+      <img src="./assets/Logo.png" alt="" class="w-[80%]" class="">
+      <div class="flex flex-col sticky top-8 bg-[#CCD5AE] w-[100px] h-contain drop-shadow-xl rounded-lg justify-center items-center pt-[32px] pb-[160px]">
+        <img src="./assets/WeaDay.svg" alt="" class="w-[30%] mt-[120px]">
+      </div>
+    </div>
+    <!--Main Content-->
+    <div id="main-content" class="flex flex-col w-contain h-contain pt-[44px] text-xl px-[28px] py-[8px]">
+      <!-- <img src="./assets/LogoV2.svg" alt="" class="w-[28%] flex justify-center items-center xl:hidden"> -->
+      <div class="flex justify-between items-center w-full h-contain mt-[40px]">
+        <div class="">
+          <h2 class="">Your Location :</h2>
+          <h1 class="font-semibold" id="city">-</h1>
+        </div>
+        <div class="flex items-center">
+          <span class="absolute pl-[12px]"><img src="/assets/search.svg" alt=""></span>
+          <!--Search-->
+          <input type="text" class="w-[376px] h-[40px] text-base rounded-lg px-[16px] py-[12px] text-end" id="InputSearchCountry" placeholder="Search Your Location">
+        </div>
+      </div>
+      <div class="flex items-center mt-[40px] space-x-4">
+        <div class="w-[60%] h-[360px] bg-[url('/assets/img1.svg')] bg-cover rounded-lg" id="icon">
+          <div class="flex justify-between w-contain h-[80px] pt-[28px] px-[24px]">
+            <h1 class="text-2xl font-bold">Weather Today</h1>
+            <div class="flex flex-col text-end">
+              <h1 class="text-3xl font-bold" id="temp">-</h1>
+              <p class="" id="description">-</p>
+            </div>  
+          </div>
+          <div class="flex mt-[180px] justify-center gap-x-[40px]">
+            <div class="flex flex-col justify-center items-center w-[120px] h-[72px] bg-[#CCD5AE] rounded-lg p-[16px] gap-y-[4px] gap-x-[12px]">
+              <p class="text-sm font-medium">Humadity</p>
+              <h1 class="text-base font-bold" id="humidity">%</h1>
+            </div>
+            <div class="flex flex-col justify-center items-center w-[120px] h-[72px] bg-[#CCD5AE] rounded-lg p-[16px] gap-y-[4px] gap-x-[12px]">
+                <p class="text-sm font-medium">Pressure</p>
+                <h1 class="text-base font-bold" id="pressure">mb</h1>
+            </div>
+            <div class="flex flex-col justify-center items-center w-[120px] h-[72px] bg-[#CCD5AE] rounded-lg p-[16px] gap-y-[4px] gap-x-[12px]">
+              <p class="text-sm font-medium">Visibility</p>
+              <h1 class="text-base font-bold" id="wind">Km</h1>
+            </div>
+          </div>
+        </div>
+        <!--Hourly forecast/weather kondisi-->
+        <div class="flex flex-col items-center w-[40%] h-[360px] bg-[#ffffff] rounded-lg space-y-[20px]">
+          <div class="flex bg-[#ffffff] w-full h-[80px] justify-center items-center rounded-lg">
+            <h2 class="font-bold text-xl mt-[24px]">Hourly Forecast</h2>
+          </div>
+          <div class="overflow-y-auto w-full">
+            <div class="flex flex-col px-[24px] py-[16px]">
+              <div class="flex justify-between w-full h-contain bg-[#ffffff] p-[12px] border-b-2 border-t-2 border-neutral-300 items-center">
+                <h1 class="text-xl font-semibold">00:00</h1>
+                <div class="flex space-x-[12px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                  <img src="../assets/iconset/Precipitation=Precipitation(Dark).svg" alt="" class="w-[32px]">
+                  <p class="text-base" id="description00">-</p>
+                </div>
+              </div>
+              <div class="flex justify-between w-full h-contain bg-[#ffffff] p-[12px] border-b-2  border-neutral-300 items-center">
+                <h1 class="text-xl font-semibold">03:00</h1>
+                <div class="flex space-x-[12px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                  <img src="../assets/iconset/Precipitation=Precipitation(Dark).svg" alt="" class="w-[32px]">
+                  <p class="text-base" id="description03">-</p>
+                </div>
+              </div>
+              <div class="flex justify-between w-full h-contain bg-[#ffffff] p-[12px] border-b-2  border-neutral-300 items-center">
+                <h1 class="text-xl font-semibold">06:00</h1>
+                <div class="flex space-x-[12px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                  <img src="../assets/iconset/Precipitation=Precipitation(Dark).svg" alt="" class="w-[32px]">
+                  <p class="text-base" id="description06">-</p>
+                </div>
+              </div>
+              <div class="flex justify-between w-full h-contain bg-[#ffffff] p-[12px] border-b-2  border-neutral-300 items-center">
+                <h1 class="text-xl font-semibold">09:00</h1>
+                <div class="flex space-x-[12px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                  <img src="../assets/iconset/Precipitation=Precipitation(Dark).svg" alt="" class="w-[32px]">
+                  <p class="text-base" id="description09">-</p>
+                </div>
+              </div>
+              <div class="flex justify-between w-full h-contain bg-[#ffffff] p-[12px] border-b-2  border-neutral-300 items-center">
+                <h1 class="text-xl font-semibold">12:00</h1>
+                <div class="flex space-x-[12px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                  <img src="../assets/iconset/Precipitation=Precipitation(Dark).svg" alt="" class="w-[32px]">
+                  <p class="text-base" id="description12">-</p>
+                </div>
+              </div>
+              <div class="flex justify-between w-full h-contain bg-[#ffffff] p-[12px] border-b-2  border-neutral-300 items-center">
+                <h1 class="text-xl font-semibold">15:00</h1>
+                <div class="flex space-x-[12px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                  <img src="../assets/iconset/Precipitation=Precipitation(Dark).svg" alt="" class="w-[32px]">
+                  <p class="text-base" id="description15">-</p>
+                </div>
+              </div>
+              <div class="flex justify-between w-full h-contain bg-[#ffffff] p-[12px] border-b-2  border-neutral-300 items-center">
+                <h1 class="text-xl font-semibold">18:00</h1>
+                <div class="flex space-x-[12px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                  <img src="../assets/iconset/Precipitation=Precipitation(Dark).svg" alt="" class="w-[32px]">
+                  <p class="text-base" id="description18">-</p>
+                </div>
+              </div>
+              <div class="flex justify-between w-full h-contain bg-[#ffffff] p-[12px] items-center">
+                <h1 class="text-xl font-semibold">21:00</h1>
+                <div class="flex space-x-[12px] w-contain h-contain px-[8px] py-[4px] rounded-md items-center">
+                  <img src="../assets/iconset/Precipitation=Precipitation(Dark).svg" alt="" class="w-[32px]">
+                  <p class="text-base" id="description21">-</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="rekomendasi" class="flex flex-col w-contain h-contain py-[40px]">
+        <h1 class="flex flex-col py-[10px] font-bold text-2xl">Recomendations</h1>
+        <div class="flex mt-[20px] gap-x-[80px] items-center">
+          <div class="flex space-x-[20px]">
+            <div class="flex flex-col space-y-4 w-[24%] h-contain">
+              <div class="flex space-x-[16px] w-contain h-contain px-[16px] py-[24px] rounded-lg bg-[#ffffff]">
+                <img src="./assets/iconset/Temp=Temp48.svg" alt="" class="bg-[#ffffff] w-[40px] drop-shadow-lg rounded-md">
+                <span class="flex flex-col justify-center">
+                  <label class="font-semibold text-base" for="">Heat Stroke</label>
+                  <p class="text-base font-regular" id="heatstroke">-</p>
+                </span>
+              </div>
+              <div class="flex space-x-[16px] w-contain h-contain px-[20px] py-[20px] rounded-lg bg-[#ffffff]">
+                <img src="./assets/iconset/LowTemp=Dark.svg" alt="" class="bg-[#ffffff] w-[40px] drop-shadow-lg rounded-md">
+                <span class="flex flex-col justify-center">
+                  <label class="font-semibold text-base" for="">Wind Chill</label>
+                  <p class="text-base font-regular" id="windchill">-</p>
+                </span>
+              </div>
+            </div>
+            <div class="flex gap-x-[20px] w-[76%] h-contain gap-x-[12px]">
+              <div class="flex flex-col w-[25%] h-contain px-[34px] py-[24px] rounded-lg bg-[#ffffff] justify-center items-center gap-y-2]">
+                <label class="font-semibold text-[80%]" for="">Umbrella</label>
+                <img src="./assets/umbrella.svg" alt="" class="bg-[#ffffff] w-[88px]">
+                <p class="text-sm font-regular" id="umbrella">-</p>
+              </div>
+              <div class="flex flex-col w-[25%] h-contain px-[34px] py-[24px] rounded-lg bg-[#ffffff] justify-center items-center gap-y-2">
+                <label class="font-semibold text-[80%]" for="">Outdoor</label>
+                <img src="./assets/outdoor.svg" alt="" class="bg-[#ffffff] w-[88px]">
+                <p class="text-sm font-regular" id="outdoor">-</p>
+              </div>
+              <div class="flex flex-col w-[25%] h-contain px-[34px] py-[24px] rounded-lg bg-[#ffffff] justify-center items-center gap-y-2">
+                <label class="font-semibold text-[80%]" for="">Clothes</label>
+                <img src="./assets/clothes.svg" alt="" class="bg-[#ffffff] w-[88px]">
+                <p class="text-sm font-regular" id="clothes">-</p>
+              </div>
+              <div class="flex flex-col w-[25%] h-contain px-[34px] py-[24px] rounded-lg bg-[#ffffff] justify-center items-center gap-y-2">
+                <label class="font-semibold text-[80%]" for="">UV Index</label>
+                <img src="./assets/uv.svg" alt="" class="bg-[#ffffff] w-[88px]">
+                <p class="text-sm font-regular" id="uvindex">-</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="activity-recommendation" class="flex flex-col gap-y-[20px] pt-[20px] pb-[100px]">
+        <h1 class="text-2xl font-bold">Activity Recommendations</h1>
+        <!--<p class="text-xl font-normal ">- Nikmati kegiatan di luar ruangan seperti piknik, bersepeda, atau jalan-jalan di taman.<br>
+              - Pakailah pakaian yang nyaman dan ringan, seperti kaos berlengan pendek, celana pendek, dan sandal.<br>
+              - Jangan lupa menggunakan sunblock atau sunscreen untuk melindungi kulit dari sinar matahari yang berlebihan.<br>
+        </p>-->
+        <div class="text-xl" id="recommendations"></div>
+        <!--<div id="recommendationsheatstroke"></div>-->
+      </div>
+    </div>
+    <!--weather prediction-->
+    <div class="bg-[#E9EDC9] flex flex-col items-center w-[440px] h-contain">
+      <h1 class="flex flex-col py-[20px] font-bold text-2xl mt-[48px]" id="WeatherPrediction">Weather Prediction</h1>
+      <div class="" id="forecast-container"></div>
+    </div>
+  </div>
+  <script src="analytics.js"></script>
+</body>
+</html>
+
+
+<!--
+      <div id="WeatherPrediction" class="flex flex-col items-center py-[20px]">
+        <h1 class="flex flex-col py-[20px] font-bold text-2xl" id="WeatherPrediction">Weather Prediction</h1>
+        <div class="flex flex-col gap-y-[16px]">
+          <div class="flex flex-row w-[255px] h-[80px] bg-[#ffffff] rounded-lg gap-x-[20px] items-center p-[16px]">
+            <img src="./assets/bright.svg" alt="" class="w-[48px]">
+            <span>
+              <p>Tue, 7 June 2023</p>
+              <label class="font-semibold" for="">Sunny</label>
+            </span>
+          </div>
+          <div class="flex flex-row w-[255px] h-[80px] bg-[#ffffff] rounded-lg gap-x-[20px] items-center p-[16px]">
+            <img src="./assets/cloud.svg" alt="" class="w-[48px]">
+            <span>
+              <p>Wed, 8 June 2023</p>
+              <label class="font-semibold" for="">Cloudy</label>
+            </span>
+          </div>
+          <div class="flex flex-row w-[255px] h-[80px] bg-[#ffffff] rounded-lg gap-x-[20px] items-center p-[16px]">
+            <img src="./assets/rain.svg" alt="" class="w-[48px]">
+            <span>
+              <p>Thu, 9 June 2023</p>
+              <label class="font-semibold" for="">Rainy</label>
+            </span>
+          </div>
+          <div class="flex flex-row w-[255px] h-[80px] bg-[#ffffff] rounded-lg gap-x-[20px] items-center p-[16px]">
+            <img src="./assets/bright.svg" alt="" class="w-[48px]">
+            <span>
+              <p>Fri, 10 June 2023</p>
+              <label class="font-semibold" for="">Sunny</label>
+            </span>
+          </div>
+          <div class="flex flex-row w-[255px] h-[80px] bg-[#ffffff] rounded-lg gap-x-[20px] items-center p-[16px]">
+            <img src="./assets/bright.svg" alt="" class="w-[48px]">
+            <span>
+              <p>Sat, 11 June 2023</p>
+              <label class="font-semibold" for="">Sunny</label>
+            </span>
+          </div>
+      -->
