@@ -105,18 +105,33 @@ let weather = {
       } else {
         if (condition.includes("clear")) {
           backgroundImage = "url('image/night.jpeg')";
+
+          document.getElementById("weatherToday").className = "text-2xl font-bold text-neutral-50";
+          document.getElementById("temp").className = "text-3xl font-bold text-neutral-50";
           document.getElementById("description").className = "text-base font-semibold text-neutral-50";
         } else if (condition.includes("cloud")) {
           backgroundImage = "url('image/night.jpeg')";
+
+          document.getElementById("weatherToday").className = "text-2xl font-bold text-neutral-50";
+          document.getElementById("temp").className = "text-3xl font-bold text-neutral-50";
           document.getElementById("description").className = "text-base font-semibold text-neutral-50";
         } else if (condition.includes("rain")) {
           backgroundImage = "url('image/rain.jpeg')";
+
+          document.getElementById("weatherToday").className = "text-2xl font-bold text-neutral-50";
+          document.getElementById("temp").className = "text-3xl font-bold text-neutral-50";
           document.getElementById("description").className = "text-base font-semibold text-neutral-50";
         } else if (condition.includes("snow")) {
           backgroundImage = "url('image/snow.jpeg')";
+
+          document.getElementById("weatherToday").className = "text-2xl font-bold text-neutral-50";
+          document.getElementById("temp").className = "text-3xl font-bold text-neutral-50";
           document.getElementById("description").className = "text-base font-semibold text-neutral-50";
         } else {
           backgroundImage = "url('/assets/img1.svg')";
+
+          document.getElementById("weatherToday").className = "text-2xl font-bold text-neutral-50";
+          document.getElementById("temp").className = "text-3xl font-bold text-neutral-50";
           document.getElementById("description").className = "text-base font-semibold text-neutral-50";
         }
       }
